@@ -18,7 +18,7 @@ function ListsContainer() {
   }, []);
   const addNewList = (title, excerpt) => {
     axios
-      .post("/v1/lists", { list: { title, excerpt } })
+      .post("/api/v1/lists", { list: { title, excerpt } })
       .then(response => {
         console.log(response);
         const updatedLists = [...lists, response.data];
@@ -31,7 +31,7 @@ function ListsContainer() {
 
   const editList = (id, title, excerpt) => {
     axios
-      .put("/v1/lists/" + id, {
+      .put("/api/v1/lists/" + id, {
         list: {
           title,
           excerpt
@@ -48,7 +48,7 @@ function ListsContainer() {
   };
   const removeList = id => {
     axios
-      .delete("/v1/lists/" + id)
+      .delete("/api/v1/lists/" + id)
       .then(response => {
         const updatedLists = lists.filter(list => list.id !== id);
         setLists(updatedLists);

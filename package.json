@@ -1,5 +1,5 @@
 {
-    "name": "list-app-react-rails",
+    "name": "rails-react-list",
     "engines": {
         "node": "6.3.1"
     },

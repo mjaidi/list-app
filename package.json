@@ -1,11 +1,11 @@
 {
     "name": "rails-react-list",
     "engines": {
-        "node": "6.3.1"
+        "node": "12.1.0"
     },
     "scripts": {
         "build": "cd client && npm install && npm run build && cd ..",
         "deploy": "cp -a client/build/. public/",
-        "postinstall": "npm run build  --prefix client && npm run deploy --prefix client && echo 'Client built!'"
+        "postinstall": "npm run build   && npm run deploy  && echo 'Client built!'"
     }
 }

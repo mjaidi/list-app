@@ -9,7 +9,7 @@ function ListsContainer() {
   const [editingListId, setEditingListId] = useState(null);
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/v1/lists.json")
+      .get("/api/v1/lists.json")
       .then(response => {
         console.log(response);
         setLists(response.data);
